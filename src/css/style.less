@@ -1,0 +1,142 @@
+/* 
+Developer name: Jeandre Melaria
+Project title: Bakery Fresh
+Platform: Bootstrap
+Programming language: HTML5, CSS3, Bootstrap, less
+IDE tool: Dreamweaver
+Database:  -
+Project type: Email newsletter template.
+File created date: 20.07.2017
+Last modified: 23.10.2017
+ */
+
+/* 
+Table of contents
+- Variables
+- Functions
+- Mixings
+- Links
+- Media queries
+*/
+
+/* === === Variables === === */
+@color-1: #808080;
+@color-2: #00bfff;
+@color-3: #dddddd;
+@link-color-white: white;
+@link-color-grey: #f4f4f4;
+@link-color-purple: purple;
+@text-color:white;
+@margin-text:10px;
+@text-shadow: 2px 2px 5px black;
+@paddinng-div:5px;
+@min-height-div:50px;
+@img-width: 47.3%;
+@img-height: 50%;
+@div-space:10px;
+
+
+/* === === Functions === === */
+.backgroundColor(@color: @color-1){
+	background-color: @color;
+}
+.margin(@margin-top: 1rem, @margin-right: 1rem, @margin-bottom: 1rem, @margin-left: 1rem ){
+	margin-top:@margin-top;
+	margin-right: @margin-right;
+	margin-bottom:@margin-bottom;
+	margin-left:@margin-left;
+}
+.padding(@padding: 1rem){
+	padding:@padding;
+}
+
+/* === === Mixings === === */
+.bg-1{
+	.backgroundColor();
+}
+.bg-2{
+	.backgroundColor(@color-2);
+}
+.bg-3{
+	.backgroundColor(@color-3);
+}
+.margin-text{
+	.margin(@margin-top: 1rem, @margin-right: 1rem, @margin-bottom: 1rem, @margin-left: 1rem )
+}
+.margin-div{
+	.margin(-1rem, 0rem, 0rem, 0rem);
+}
+.margin-div1{
+		.margin(1rem, 1rem, 1rem, 1rem);
+}
+.margin-img{
+	.margin(1rem, 1rem, 1rem, 1rem);
+}
+.paddinng-div{
+	.padding(1rem);	
+}
+.min-height-div{
+	min-height: @min-height-div;	
+}
+.img-width{
+	width:@img-width;
+	height:@img-height;
+}
+.div-space{
+	margin:@div-space 0 0 0;
+}
+.text-color{
+	color:@text-color;	
+}
+.text-shadow{
+	text-shadow: @text-shadow;
+}
+.margin-p{
+	.margin(0rem, 0rem, 0rem, -1.5rem);
+}
+.margin-p-1{
+	.margin(-1rem, 0rem, 0rem, 0rem);	
+}
+.margin-btn{
+	.margin(1rem, 1.5rem, 1rem, 1.5rem);
+}
+/* === === Links === === */
+
+/* unvisited link*/
+a:link {
+    color: @link-color-white !important;
+}
+
+/* visited link*/
+a:visited {
+	color: @link-color-grey !important;
+	}
+
+/* mouse overlink*/
+a:hover {
+	text-decoration: underline !important;
+	color: @link-color-white !important;
+	}
+
+/* selected link*/
+a:active{
+	color: @link-color-purple !important;
+	}
+	
+/* === === Media queries === === */	
+
+@media screen and (min-width: 768px) {
+	
+.font_size {
+    font-size: 80%;
+    margin-top: -95px;
+  }	
+	}
+
+@media screen and (min-width: 992px) {
+	
+.font_size {
+    margin-top: -135px;
+  }	
+	}
+
