@@ -10,33 +10,31 @@ File created date: 20.07.2017
 Last modified: 23.10.2017
  */
 
-/* 
-Table of contents
-- Variables
-- Functions
-- Mixings
-- Links
-- Media queries
-*/
+// === === Table of contents === === //
+// - Variables
+// - Functions
+// - Mixings
+// - Links
+// - Media queries
 
-/* === === Variables === === */
+
+// === === Variables === === //
 @color-1: #808080;
 @color-2: #00bfff;
 @color-3: #dddddd;
-@link-color-white: white;
-@link-color-grey: #f4f4f4;
-@link-color-purple: purple;
-@text-color:white;
-@margin-text:10px;
+@color-4: white; 
+@color-5: #f4f4f4;
+@color-6: purple;
+@font-size: 1rem;
+
+
 @text-shadow: 2px 2px 5px black;
 @paddinng-div:5px;
-@min-height-div:50px;
-@img-width: 47.3%;
-@img-height: 50%;
-@div-space:10px;
 
 
-/* === === Functions === === */
+
+
+// === === Functions === === //
 .backgroundColor(@color: @color-1){
 	background-color: @color;
 }
@@ -49,8 +47,20 @@ Table of contents
 .padding(@padding: 1rem){
 	padding:@padding;
 }
-
-/* === === Mixings === === */
+.min-height(@min-height:50px){
+	min-height:@min-height;
+}
+.imgHeightAndWidth(@img-width:47.3%,@img-height:50%){
+	width:@img-width;
+	height:@img-height;
+}
+.margin(@margin-top:2rem, @margin-right:2rem, @margin-bottom:2rem, @margin-left:2rem){
+	margin-top:@margin-top;
+	margin-right:@margin-right;
+	margin-bottom:@margin-bottom;
+	margin-left:@margin-left;
+}
+// === === Mixings === === //
 .bg-1{
 	.backgroundColor();
 }
@@ -76,17 +86,16 @@ Table of contents
 	.padding(1rem);	
 }
 .min-height-div{
-	min-height: @min-height-div;	
+	.min-height();	
 }
 .img-width{
-	width:@img-width;
-	height:@img-height;
+	.imgHeightAndWidth();
 }
 .div-space{
-	margin:@div-space 0 0 0;
+	.margin(0.5rem, 0rem, 0rem, 0rem);
 }
 .text-color{
-	color:@text-color;	
+	color:@color-4;	
 }
 .text-shadow{
 	text-shadow: @text-shadow;
@@ -100,43 +109,59 @@ Table of contents
 .margin-btn{
 	.margin(1rem, 1.5rem, 1rem, 1.5rem);
 }
-/* === === Links === === */
+// === === Links === === //
 
-/* unvisited link*/
+// unvisited link //
 a:link {
-    color: @link-color-white !important;
+    color: @color-4 !important;
 }
 
-/* visited link*/
+// visited link //
 a:visited {
-	color: @link-color-grey !important;
+	color: @color-5 !important;
 	}
 
-/* mouse overlink*/
+// mouse overlink //
 a:hover {
 	text-decoration: underline !important;
-	color: @link-color-white !important;
+	color: @color-4 !important;
 	}
 
-/* selected link*/
+// selected link //
 a:active{
-	color: @link-color-purple !important;
+	color: @color-6 !important;
 	}
 	
-/* === === Media queries === === */	
+// === === Media queries === === //	
 
-@media screen and (min-width: 768px) {
+@media screen and (max-width: 575px) {
 	
 .font_size {
-    font-size: 80%;
-    margin-top: -95px;
+    font-size:@font-size;
+	.margin(-10rem, 0rem, 0rem, 0rem)!important;
+  }	
+	}
+@media screen and (min-width: 576px) and (min-width: 767px) {
+	
+.font_size {
+    font-size:@font-size;
+	.margin(-8rem, 0rem, 0rem, 0rem)!important;
   }	
 	}
 
+@media screen and (min-width: 768px) and (min-width: 991px) {
+	
+.font_size {
+    font-size:@font-size;
+	.margin(-8rem, 0rem, 0rem, 0rem)!important;
+  }	
+	}
 @media screen and (min-width: 992px) {
 	
 .font_size {
-    margin-top: -135px;
+	font-size:@font-size;
+	.margin(-10rem, 0rem, 0rem, 0rem)!important;
+   
   }	
 	}
 

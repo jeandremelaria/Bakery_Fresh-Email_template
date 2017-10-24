@@ -12,17 +12,6 @@ Project type: Email newsletter template.
 File created date: 20.07.2017
 Last modified: 23.10.2017
  */
-/* 
-Table of contents
-- Variables
-- Functions
-- Mixings
-- Links
-- Media queries
-*/
-/* === === Variables === === */
-/* === === Functions === === */
-/* === === Mixings === === */
 .bg-1 {
   background-color: #808080;
 }
@@ -67,7 +56,10 @@ Table of contents
   height: 50%;
 }
 .div-space {
-  margin: 10px 0 0 0;
+  margin-top: 0.5rem;
+  margin-right: 0rem;
+  margin-bottom: 0rem;
+  margin-left: 0rem;
 }
 .text-color {
   color: #ffffff;
@@ -93,32 +85,52 @@ Table of contents
   margin-bottom: 1rem;
   margin-left: 1.5rem;
 }
-/* === === Links === === */
-/* unvisited link*/
 a:link {
   color: #ffffff !important;
 }
-/* visited link*/
 a:visited {
   color: #f4f4f4 !important;
 }
-/* mouse overlink*/
 a:hover {
   text-decoration: underline !important;
   color: #ffffff !important;
 }
-/* selected link*/
 a:active {
   color: #800080 !important;
 }
-/* === === Media queries === === */@media screen and (min-width: 768px) {
+@media screen and (max-width: 575px) {
   .font_size {
-    font-size: 80%;
-    margin-top: -95px;
+    font-size: 1rem;
+    margin-top: -10rem !important;
+    margin-right: 0rem !important;
+    margin-bottom: 0rem !important;
+    margin-left: 0rem !important;
+  }
+}
+@media screen and (min-width: 576px) and (min-width: 767px) {
+  .font_size {
+    font-size: 1rem;
+    margin-top: -8rem !important;
+    margin-right: 0rem !important;
+    margin-bottom: 0rem !important;
+    margin-left: 0rem !important;
+  }
+}
+@media screen and (min-width: 768px) and (min-width: 991px) {
+  .font_size {
+    font-size: 1rem;
+    margin-top: -8rem !important;
+    margin-right: 0rem !important;
+    margin-bottom: 0rem !important;
+    margin-left: 0rem !important;
   }
 }
 @media screen and (min-width: 992px) {
   .font_size {
-    margin-top: -135px;
+    font-size: 1rem;
+    margin-top: -10rem !important;
+    margin-right: 0rem !important;
+    margin-bottom: 0rem !important;
+    margin-left: 0rem !important;
   }
 }
